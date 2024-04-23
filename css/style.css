@@ -1,0 +1,19 @@
+@import url("https://fonts.google.com/specimen/Outfit");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    --white-color:  hsl(0, 0%, 100%);
+    --light-gray-color: hsl(212, 45%, 89%);
+    --grayfish-blue-color: hsl(220, 15%, 55%);
+    --dark-blue-color: hsl(218, 44%, 22%);
+}
+
+body {
+    font-size: 15px;
+}
+
