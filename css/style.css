@@ -11,23 +11,19 @@ html {
     --light-gray-color: hsl(212, 45%, 89%);
     --grayfish-blue-color: hsl(220, 15%, 55%);
     --dark-blue-color: hsl(218, 44%, 22%);
-    
-    --mobile-font-size: 15px;
-    --gap: 1rem;
+
+    font-size: 15px;
 }
 
 body {
-    --main-gap: var(--gap);
-
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    gap: var(--gap);
+    gap: 1em;
     min-height: 100vh;
     padding: 4rem;
-    font-family: "Outfit", sans-serif;
-    font-size: calc(0.75 * var(--mobile-font-size));
+    font: 0.85rem "Outfit", sans-serif;
     background-color: var(--light-gray-color);
 }
 
@@ -39,8 +35,9 @@ main, footer {
 main {
     display: flex;
     flex-flow: column nowrap;
-    gap: var(--main-gap);
-    padding: 2rem;
+    gap: 2em;
+    padding: 1em;
+    padding-bottom: 2.5em;
     background-color: var(--white-color);
     border-radius: 2rem;
 }
@@ -63,11 +60,11 @@ img {
 section {
     display: flex;
     flex-flow: column nowrap;
-    gap: calc(1.5 * var(--main-gap));
+    gap: 1.5em;
 }
 
 h1, p {
-    padding: 0 1.5rem;
+    padding: 0 1.5em;
     text-align: center;
 }
 
@@ -80,13 +77,11 @@ h1 {
 p {
     color: var(--grayfish-blue-color);
     font-weight: 400;
-    font-size: 1em;
 }
 
 @media screen and (min-width: 375px) {
     body {
-        font-size: var(--mobile-font-size);
-        --main-gap: calc(1 * var(--gap));
+        font-size: 1rem;
     }
     main, footer {
         min-width: 350px;
@@ -95,8 +90,7 @@ p {
 
 @media screen and (min-width: 576px) {
     body {
-        font-size: 1.25* var(--mobile-font-size);
-        --main-gap: calc(1.5 * var(--gap));
+        font-size: 1.25rem;
     }
     main, footer {
         min-width: 350px;
@@ -105,8 +99,7 @@ p {
 
 @media screen and (min-width: 768px) {
     body {
-        font-size: calc(2 * var(--mobile-font-size));
-        --main-gap: calc(2 * var(--gap));
+        font-size: 2rem;
     }
     main, footer {
         max-width: 650px;
