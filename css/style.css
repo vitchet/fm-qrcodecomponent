@@ -19,15 +19,25 @@ body {
     background-color: var(--light-gray-color);
 }
 
+main, footer {
+    margin: 1rem auto;
+    width: 650px;
+}
+
 main {
     display: flex;
     flex-flow: column nowrap;
     row-gap: 3rem;
-    margin: 1rem auto;
     padding: 2rem;
     background-color: var(--white-color);
-    width: 650px;
     border-radius: 2rem;
+}
+
+footer {
+    text-align: center;
+}
+footer a { 
+    color: hsl(228, 45%, 44%); 
 }
 
 img {
@@ -56,13 +66,4 @@ p {
     color: var(--grayfish-blue-color);
     font-weight: 400;
     font-size: 2rem;
-}
-
-footer { 
-    text-align: center;
-    margin: 1rem auto;
-    width: 650px;
-}
-footer a { 
-    color: hsl(228, 45%, 44%); 
 }
