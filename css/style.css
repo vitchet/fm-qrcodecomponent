@@ -51,11 +51,11 @@ p {
     font-size: 2rem;
 }
 
-.attribution { 
-    font-size: 11px; 
+footer { 
     text-align: center;
     margin: 1rem auto;
+    width: 650px;
 }
-.attribution a { 
+footer a { 
     color: hsl(228, 45%, 44%); 
 }
