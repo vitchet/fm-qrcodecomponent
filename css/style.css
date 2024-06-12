@@ -11,23 +11,35 @@ html {
     --light-gray-color: hsl(212, 45%, 89%);
     --grayfish-blue-color: hsl(220, 15%, 55%);
     --dark-blue-color: hsl(218, 44%, 22%);
+    
+    --mobile-font-size: 15px;
+    --gap: 1rem;
 }
 
 body {
+    --main-gap: var(--gap);
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap);
+    min-height: 100vh;
+    padding: 4rem;
     font-family: "Outfit", sans-serif;
-    font-size: 15px;
+    font-size: calc(0.75 * var(--mobile-font-size));
     background-color: var(--light-gray-color);
 }
 
 main, footer {
-    margin: 1rem auto;
-    width: 650px;
+    flex-wrap: 1;
+    min-width: 300px;
 }
 
 main {
     display: flex;
     flex-flow: column nowrap;
-    row-gap: 3rem;
+    gap: var(--main-gap);
     padding: 2rem;
     background-color: var(--white-color);
     border-radius: 2rem;
@@ -35,6 +47,7 @@ main {
 
 footer {
     text-align: center;
+    font-size: 0.5em;
 }
 footer a { 
     color: hsl(228, 45%, 44%); 
@@ -42,13 +55,15 @@ footer a {
 
 img {
     display: block;
+    width: 100%;
+    height: auto;
     border-radius: 1.5rem;
 }
 
 section {
     display: flex;
     flex-flow: column nowrap;
-    row-gap: 2.5rem;
+    gap: calc(1.5 * var(--main-gap));
 }
 
 h1, p {
@@ -59,11 +74,41 @@ h1, p {
 h1 {
     color: var(--dark-blue-color);
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: 1.25em;
 }
 
 p {
     color: var(--grayfish-blue-color);
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1em;
+}
+
+@media screen and (min-width: 375px) {
+    body {
+        font-size: var(--mobile-font-size);
+        --main-gap: calc(1 * var(--gap));
+    }
+    main, footer {
+        min-width: 350px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    body {
+        font-size: 1.25* var(--mobile-font-size);
+        --main-gap: calc(1.5 * var(--gap));
+    }
+    main, footer {
+        min-width: 350px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        font-size: calc(2 * var(--mobile-font-size));
+        --main-gap: calc(2 * var(--gap));
+    }
+    main, footer {
+        max-width: 650px;
+    }
 }
