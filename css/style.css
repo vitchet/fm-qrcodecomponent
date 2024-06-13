@@ -105,3 +105,12 @@ p {
         max-width: 650px;
     }
 }
+
+@media screen and (orientation:landscape) and (max-width: 1280px) {
+    body {
+        font-size: 1rem;
+    }
+    main, footer {
+        max-width: 350px;
+    }
+}
