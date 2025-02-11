@@ -1,0 +1,14 @@
+@import url("https://fonts.google.com/specimen/Outfit");
+
+@theme {
+    --color-*: initial;
+    --color-white: hsl(0, 0%, 100%);
+    --color-light-gray: hsl(212, 45%, 89%);
+    --color-grayfish-blue: hsl(220, 15%, 55%);
+    --color-dark-blue: hsl(218, 44%, 22%);
+    --color-blue: blue;
+
+    --font-outfit: "Outfit", sans-serif;
+
+    --text-3xl: 1.70rem;
+}
