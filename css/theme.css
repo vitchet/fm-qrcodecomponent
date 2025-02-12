@@ -10,5 +10,8 @@
 
     --font-outfit: "Outfit", sans-serif;
 
+    --text-2xl: 1.4rem;
     --text-3xl: 1.70rem;
+
+    --radius-3xl: 1.4rem;
 }

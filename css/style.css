@@ -36,7 +36,7 @@
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
-    --text-2xl: 1.5rem;
+    --text-2xl: 1.4rem;
     --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.70rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
@@ -78,7 +78,7 @@
     --radius-lg: 0.5rem;
     --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
-    --radius-3xl: 1.5rem;
+    --radius-3xl: 1.4rem;
     --radius-4xl: 2rem;
     --shadow-2xs: 0 1px rgb(0 0 0 / 0.05);
     --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
@@ -304,14 +304,14 @@
   .gap-4 {
     gap: calc(var(--spacing) * 4);
   }
-  .gap-8 {
-    gap: calc(var(--spacing) * 8);
-  }
-  .rounded-2xl {
-    border-radius: var(--radius-2xl);
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
   }
   .rounded-3xl {
     border-radius: var(--radius-3xl);
+  }
+  .rounded-xl {
+    border-radius: var(--radius-xl);
   }
   .bg-light-gray {
     background-color: var(--color-light-gray);
@@ -319,46 +319,57 @@
   .bg-white {
     background-color: var(--color-white);
   }
-  .p-5 {
-    padding: calc(var(--spacing) * 5);
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
+  .p-7 {
+    padding: calc(var(--spacing) * 7);
   }
   .pr-4 {
     padding-right: calc(var(--spacing) * 4);
   }
-  .pr-16 {
-    padding-right: calc(var(--spacing) * 16);
-  }
-  .pb-20 {
-    padding-bottom: calc(var(--spacing) * 20);
+  .pb-9 {
+    padding-bottom: calc(var(--spacing) * 9);
   }
   .pl-4 {
     padding-left: calc(var(--spacing) * 4);
   }
-  .pl-16 {
-    padding-left: calc(var(--spacing) * 16);
-  }
   .text-center {
     text-align: center;
   }
-  .text-3xl {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
   .text-xs {
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
   }
+  .leading-5 {
+    --tw-leading: calc(var(--spacing) * 5);
+    line-height: calc(var(--spacing) * 5);
+  }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
+  }
   .text-blue {
     color: var(--color-blue);
+  }
+  .text-dark-blue {
+    color: var(--color-dark-blue);
+  }
+  .text-grayfish-blue {
+    color: var(--color-grayfish-blue);
   }
 }
 @import url("https://fonts.google.com/specimen/Outfit");
 html {
-  font-size: clamp(calc(0.75 * 15px), 3vw, calc(3 * 15px));
+  font-size: clamp(calc(0.85 * 15px), 4vw, calc(3.85 * 15px));
 }
 @keyframes spin {
   to {
@@ -385,6 +396,10 @@ html {
     transform: none;
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
 }
 @property --tw-font-weight {
   syntax: "*";
