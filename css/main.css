@@ -1,6 +1,0 @@
-@import "tailwindcss";
-@import "./theme.css";
-
-html {
-    font-size: clamp(calc(0.85 * 15px), 4vw, calc(3.85 * 15px));
-}

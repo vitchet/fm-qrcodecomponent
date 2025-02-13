@@ -1,0 +1,8 @@
+@layer components {
+    /* Class for centered flex containers */
+    .flex-c-nw {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+}
